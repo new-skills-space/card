@@ -1,0 +1,58 @@
+:root {
+  --text: white;
+  --bg: white;
+  --box-bg: #e3e3e3;
+  --primary: #111;
+  --primary-hover: #111;
+  --primary-active: #111;
+  --secondary: #111;
+  --secondary-hover: #111;
+  --secondary-active: #111;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--bg);
+  nav {
+    z-index: 999999;
+  }
+}
+.bgForBlock {
+  background-color: var(--box-bg);
+  .imgStyle {
+    mask-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+#block2 {
+  position: relative;
+  gap: 3.5%;
+  @media (max-width: 1300px) {
+    gap: 4%;
+  }
+  #block2Sign {
+    position: absolute;
+    top: -100px;
+    opacity: 0;
+    left: 0;
+  }
+  .block2child {
+    width: 31%;
+    margin-bottom: 4vh;
+    @media (max-width: 1300px) {
+      width: 48%;
+    }
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+}
